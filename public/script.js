@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (category) query.append('category', category);
 
             const response = await fetch(`/wallpapers?${query.toString()}`);
+            console.log(response)
             if (!response.ok) {
                 throw new Error('Failed to fetch wallpapers');
             }
