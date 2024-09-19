@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Public Image Gallery</h1>
+    <div class="search-section">
+        <input type="text" id="search-input" placeholder="Search by title, description, or category...">
+    </div>
+    <div class="upload-form-section">
+        <form id="upload-form" method="POST" enctype="multipart/form-data">
+            <input type="text" name="title" placeholder="Title" required>
+            <textarea name="description" placeholder="Description" required></textarea>
+            <input type="file" name="image" accept="image/*" required>
+            <select name="category" required>
+                <option value="" disabled selected>Select Category</option>
+                <option value="Nature">Nature</option>
+                <option value="Abstract">Abstract</option>
+                <option value="Animals">Animals</option>
+                <option value="Technology">Technology</option>
+                <option value="Space">Space</option>
+                <option value="Art">Art</option>
+                <option value="Food">Food</option>
+                <option value="Architecture">Architecture</option>
+                <option value="Sports">Sports</option>
+                <option value="Fashion">Fashion</option>
+            </select>
+            <button type="submit">Upload Wallpaper</button>
+        </form>
+    </div>
+    <div class="category-slider">
+        <button class="category-button" data-category="">All</button>
+        <button class="category-button" data-category="Nature">Nature</button>
+        <button class="category-button" data-category="Abstract">Abstract</button>
+        <button class="category-button" data-category="Animals">Animals</button>
+        <button class="category-button" data-category="Technology">Technology</button>
+        <button class="category-button" data-category="Space">Space</button>
+        <button class="category-button" data-category="Art">Art</button>
+        <button class="category-button" data-category="Food">Food</button>
+        <button class="category-button" data-category="Architecture">Architecture</button>
+        <button class="category-button" data-category="Sports">Sports</button>
+        <button class="category-button" data-category="Fashion">Fashion</button>
+    </div>
+    <div id="gallery"></div>
+    <script src="script.js"></script>
+</body>
+</html>
